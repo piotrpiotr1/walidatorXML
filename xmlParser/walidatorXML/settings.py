@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 from django.contrib.messages import constants as message_constants
+import os
 MESSAGE_LEVEL = message_constants.DEBUG
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -126,7 +127,7 @@ STATICFILES_DIRS = [
 
 ]
 
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = 'static/'
 
 # Default primary key field type
